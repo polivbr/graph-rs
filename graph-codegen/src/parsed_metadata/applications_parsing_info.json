@@ -1,0 +1,7 @@
+{
+  "modifier_name": "applications",
+  "path": "/applications",
+  "resource_identity": "Applications",
+  "trim_path_start": null,
+  "parameter_filter": []
+}
