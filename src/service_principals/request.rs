@@ -387,4 +387,58 @@ where
         params: 1,
         has_body: true
     });
+
+    post!({
+        doc: "Create new navigation property to federatedIdentityCredentials for servicePrincipals",
+        name: create_federated_identity_credentials,
+        response: serde_json::Value,
+        path: "/servicePrincipals/{{id}}/federatedIdentityCredentials",
+        params: 1,
+        has_body: true
+    });
+
+    get!({
+        doc: "Get federatedIdentityCredentials from servicePrincipals",
+        name: list_federated_identity_credentials,
+        response: serde_json::Value,
+        path: "/servicePrincipals/{{id}}/federatedIdentityCredentials",
+        params: 1,
+        has_body: false
+    });
+
+    get!({
+        doc: "Get the number of the resource",
+        name: get_federated_identity_credentials_count,
+        response: serde_json::Value,
+        path: "/servicePrincipals/{{id}}/federatedIdentityCredentials/$count",
+        params: 1,
+        has_body: false
+    });
+
+    delete!({
+        doc: "Delete navigation property federatedIdentityCredentials for servicePrincipals",
+        name: delete_federated_identity_credentials,
+        response: NoContent,
+        path: "/servicePrincipals/{{id}}/federatedIdentityCredentials/{{id2}}",
+        params: 2,
+        has_body: false
+    });
+
+    get!({
+        doc: "Get federatedIdentityCredentials from servicePrincipals",
+        name: get_federated_identity_credentials,
+        response: serde_json::Value,
+        path: "/servicePrincipals/{{id}}/federatedIdentityCredentials/{{id2}}",
+        params: 2,
+        has_body: false
+    });
+
+    patch!({
+        doc: "Update the navigation property federatedIdentityCredentials in servicePrincipals",
+        name: update_federated_identity_credentials,
+        response: serde_json::Value,
+        path: "/servicePrincipals/{{id}}/federatedIdentityCredentials/{{id2}}",
+        params: 2,
+        has_body: true
+    });
 }
